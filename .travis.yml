@@ -1,0 +1,9 @@
+language: cpp
+os: windows
+arch: amd64
+compiler: clang
+cache:
+script:
+  - clang --version
+  - test ! -d /c/mozilla-build && git clone https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
+  
