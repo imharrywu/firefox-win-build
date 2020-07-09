@@ -3,6 +3,8 @@ os: windows
 arch: amd64
 compiler: clang
 cache:
+  directories:
+  - /c/mozilla-build
 script:
   - clang --version
   - test ! -d /c/mozilla-build && git clone https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
