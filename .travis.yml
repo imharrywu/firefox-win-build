@@ -5,7 +5,7 @@ compiler: clang
 
 before_install:
   - choco install hg
-  - refreshenv
+  - refreshenv.cmd
 script:
   - clang --version
   - git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
