@@ -9,7 +9,8 @@ before_install:
 script:
   - clang --version
   - git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
-  - "C:/Program Files/Mercurial/hg" clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
+  - set PATH=%PATH%;C:/Program Files/Mercurial/;
+  - hg clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
   - c:/mozilla-build/start-shell.bat /c/mozilla-central/mach build
   
   
