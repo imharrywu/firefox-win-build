@@ -22,13 +22,7 @@ script:
 - python --version
 
 - git clone --branch master https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
-- export PATH=$PATH:/c/Users/travis/.cargo/bin
-- export PATH=$PATH #:/c/mozilla-build/bin
-- export PATH=$PATH #:/c/mozilla-build/nsis-3.01/bin
-- export PATH=$PATH:/c/mozilla-build/python3/
-- export PATH=$PATH #:/c/mozilla-build/python/
-
-
+- export PATH=/c/Users/travis/.cargo/bin:/local/bin:/c/mozilla-build/bin:/c/mozilla-build/kdiff3:/c/mozilla-build/nsis-3.01:/c/mozilla-build/python:/c/mozilla-build/python/Scripts:/c/mozilla-build/python3:/c/mozilla-build/python3/Scripts:.:/usr/local/bin:/mingw/bin:/bin:$PATH
 - git clone --branch master https://github.com/imharrywu/mozilla-central /c/mozilla-central #hg clone -b default https://hg.mozilla.org/mozilla-central/ /c/mozilla-central
 - cd /c/mozilla-central
 - pwd
