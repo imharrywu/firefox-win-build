@@ -8,12 +8,14 @@ before_install:
 script:
 - clang --version
 - C:\\Program\ Files\\Mercurial\\hg.exe   # Ok
-- "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail
+- /C/Program\ Files/Mercurial/hg.exe      # Ok
 - C:/Program\ Files/Mercurial/hg.exe      # Ok
+- "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail
 - "C:/Program\ Files/Mercurial/hg.exe"    # Fail
 - 'C:/Program\ Files/Mercurial/hg.exe'    # Fail
 - "/C/Program\ Files/Mercurial/hg.exe"    # Fail
-- /C/Program\ Files/Mercurial/hg.exe      # Ok
+- '/C/Program\ Files/Mercurial/hg.exe'    # Fail
+
 - echo $PATH
 
   
