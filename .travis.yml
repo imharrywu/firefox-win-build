@@ -16,6 +16,7 @@ script:
 - echo "C:/Program\ Files/Mercurial/hg.exe"    # Fail
 - echo "/C/Program\ Files/Mercurial/hg.exe"    # Fail
 - export PATH=$PATH:/C/Program\ Files/Mercurial
+- hg
 - echo $PATH
 - git clone https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
 - /c/mozilla-build/start-shell.bat 'echo hello'
