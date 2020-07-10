@@ -9,6 +9,7 @@ script:
 - clang --version
 - C:\\Program\ Files\\Mercurial\\hg.exe
 - "C:\\Program\ Files\\Mercurial\\hg.exe"
+- C:/Program\ Files/Mercurial/hg.exe
 - "C:/Program\ Files/Mercurial/hg.exe"
 - "/C/Program\ Files/Mercurial/hg.exe"
 - /C/Program\ Files/Mercurial/hg.exe
