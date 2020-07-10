@@ -25,7 +25,7 @@ script:
 - export PATH=$PATH:/c/Users/travis/.cargo/bin
 - export PATH=$PATH #:/c/mozilla-build/bin
 - export PATH=$PATH #:/c/mozilla-build/nsis-3.01/bin
-- export PATH=$PATH #:/c/mozilla-build/python3/
+- export PATH=$PATH:/c/mozilla-build/python3/
 - export PATH=$PATH #:/c/mozilla-build/python/
 
 
