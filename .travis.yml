@@ -34,10 +34,8 @@ script:
 - cd /c/mozilla-central
 - pwd
 
-- /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ bootstrap\ --no-interactive\ --application-choice\ browser\"
-- /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ bootstrap\ --no-interactive\ --application-choice\ browser\"
-- /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ build\"
-- /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ build\"
+- ./mach bootstrap --no-interactive --application-choice browser
+- ./mach build
 
 
   
