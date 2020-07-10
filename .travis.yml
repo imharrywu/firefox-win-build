@@ -15,7 +15,11 @@ script:
 - echo "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail, double-qute will escape <backslash><space> too early!
 - echo "C:/Program\ Files/Mercurial/hg.exe"    # Fail
 - echo "/C/Program\ Files/Mercurial/hg.exe"    # Fail
+- export PATH=$PATH:/C/Program\ Files/Mercurial
 - echo $PATH
+- git clone https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
+- /c/mozilla-build/start-shell.bat 'echo hello'
+
 
   
   
