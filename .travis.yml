@@ -8,7 +8,9 @@ before_install:
   - refreshenv.cmd
 script:
   - clang --version
-  - git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
+  - find "C:\Program Files\Mercurial"
+  - find "C:/Program Files/Mercurial/"
+  - ls "C:\Program Files\Mercurial\" #git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
   - echo $PATH
   - hg clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
   - c:/mozilla-build/start-shell.bat /c/mozilla-central/mach build
