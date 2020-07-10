@@ -9,7 +9,7 @@ script:
   - clang --version
   - git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
   - echo $PATH
-  - "C:\Program Files\Mercurial\hg.exe "clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
+  - "C:/Program Files/Mercurial/hg.exe" clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
   - "C:/mozilla-build/start-shell.bat" /c/mozilla-central/mach build
   
   
