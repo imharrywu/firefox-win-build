@@ -10,12 +10,11 @@ script:
 - C:\\Program\ Files\\Mercurial\\hg.exe   # Ok
 - /C/Program\ Files/Mercurial/hg.exe      # Ok
 - C:/Program\ Files/Mercurial/hg.exe      # Ok
-- "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail
-- "C:/Program\ Files/Mercurial/hg.exe"    # Fail
-- 'C:/Program\ Files/Mercurial/hg.exe'    # Fail
-- "/C/Program\ Files/Mercurial/hg.exe"    # Fail
-- '/C/Program\ Files/Mercurial/hg.exe'    # Fail
-
+- '/C/Program\ Files/Mercurial/hg.exe'    # Ok
+- 'C:/Program\ Files/Mercurial/hg.exe'    # Ok
+- echo "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail, double-qute will escape <backslash><space> too early!
+- echo "C:/Program\ Files/Mercurial/hg.exe"    # Fail
+- echo "/C/Program\ Files/Mercurial/hg.exe"    # Fail
 - echo $PATH
 
   
