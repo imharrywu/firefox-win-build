@@ -1,13 +1,7 @@
 language: cpp
 os: windows
 arch: amd64
-compiler: clang
-cache:
-  directories:
-  - /c/mozilla-build
-  - /c/mozilla-central
-  - /c/Users/travis/.cargo
-  
+
 before_install:
 - choco install hg
 script:
@@ -20,16 +14,22 @@ script:
 - echo "C:\\Program\ Files\\Mercurial\\hg.exe" # Fail, double-qute will escape <backslash><space> too early!
 - echo "C:/Program\ Files/Mercurial/hg.exe"    # Fail
 - echo "/C/Program\ Files/Mercurial/hg.exe"    # Fail
-- export PATH=$PATH:/C/Program\ Files/Mercurial
-- export PATH=/c/Users/travis/.cargo/bin:$PATH
 - echo $PATH
 - echo $SHELL
-- /c/mozilla-build/start-shell.bat
-- echo $PATH
-- echo $SHELL
+- python --version
+- python3 --version
 - git clone --branch master https://github.com/imharrywu/mozillabuildsetup /c/mozilla-build
 - git clone --branch master https://github.com/imharrywu/mozilla-central /c/mozilla-central #hg clone -b default https://hg.mozilla.org/mozilla-central/ /c/mozilla-central
+- export PATH=$PATH:/C/Program\ Files/Mercurial
+- export PATH=$PATH:/c/Users/travis/.cargo/bin
+- export PATH=$PATH:/c/mozilla-build/bin
+- export PATH=$PATH:/c/mozilla-build/nsis-3.01/bin
+- export PATH=$PATH:/c/mozilla-build/python/
+- export PATH=$PATH:/c/mozilla-build/python3/
+- python --version
+- python3 --version
 - cd /c/mozilla-central
+- echo $PWD
 - /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ bootstrap\ --no-interactive\ --application-choice\ browser\"
 - /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ bootstrap\ --no-interactive\ --application-choice\ browser\"
 - /c/mozilla-build/start-shell.bat \"/c/mozilla-central/mach\ build\"
