@@ -5,14 +5,11 @@ compiler: clang
 
 before_install:
   - choco install hg
-  - refreshenv.cmd
 script:
   - clang --version
-  - find "C:\Program Files\Mercurial"
-  - find "C:/Program Files/Mercurial/"
-  - ls "C:\Program Files\Mercurial\" #git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
+  - git clone https://github.com/imharrywu/mozillabuildsetup C:/mozilla-build
   - echo $PATH
-  - hg clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
-  - c:/mozilla-build/start-shell.bat /c/mozilla-central/mach build
+  - "C:\Program Files\Mercurial\hg.exe "clone https://hg.mozilla.org/mozilla-central c:/mozilla-central
+  - "C:/mozilla-build/start-shell.bat" /c/mozilla-central/mach build
   
   
